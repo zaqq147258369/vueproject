@@ -1,0 +1,26 @@
+认知webpack :
+  webpack是现代的js应用静态模块打包工具。前端模块化打包工具，针对模块化的开发，并对文件进行压缩合并、预处理。
+webpack依赖于node环境。
+node环境为了更好的运行，使用npm工具管理各种包。
+
+webpack基本语法:
+  webpack ./xx.js ./dist/bundle.js  //使用webpack自动打包js。
+
+webpack的配置：
+  webpack.config.js配置：
+  const path = require('path') //获取到文件路径
+    module.exports = {
+      entry:'./main.js'  //入口文件，配置webpack打包的入口js文件
+      output：{ //出口文件，webpack配置的出口文件
+        path：path.resolve(__dirname, 'dist'),  //出口文件的路径，但是需要绝对路径，所以需要通过node语法获取webpack配置文件的位置。
+        filename:'bundle.js'      //出口文件的文件名。
+      }
+    }
+
+    npm install webpack@3.6.0 --save-dev //开发时依赖webpack，
+
+  package.json配置：
+
+
+
+  webpack中使用css文件
