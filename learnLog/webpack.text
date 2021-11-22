@@ -26,4 +26,14 @@ webpack的配置：
 
 
 
-  webpack中使用css文件
+  webpack中使用css等其他文件
+  loader是webpack中一个核心的概念，平时不仅需要js，还需要将ts等文件转成js。但是webpack本身的能力来说是不具备的。
+  所以需要给webpack扩展对应的loader。
+  使用loader来打包各种类型的文件。
+
+  css-loader
+  style-loader
+  less-loader
+
+
+
