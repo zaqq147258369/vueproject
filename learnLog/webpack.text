@@ -19,6 +19,9 @@ webpack的配置：
 
     npm install webpack@3.6.0 --save-dev //开发时依赖webpack，
 
+     "dependencies": { //{运行时依赖包}
+      "devDependencies": { //开发时依赖包
+
   package.json配置：
 
 

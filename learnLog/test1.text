@@ -1,0 +1,36 @@
+//标签
+<template>
+	
+</template>
+
+<script>
+	//在该页面注册 
+	components:{
+		
+	},
+	//全局组件，组件内部也可以有各种属性，data，methods属性 
+	vue.component('cpn1',{
+		template:
+		`<div>
+			<h2></h2>
+		</div>`,
+		data() { //data属性，返回一个对象，对象汇总保存数据
+			return {
+				
+			}
+		}
+	});
+	const app = new Vue({
+		el:'#app',
+		data: {
+			message:'xxx'
+		},
+		components:{
+			template:`
+			`
+		}
+	})
+</script>
+
+<style>
+</style>

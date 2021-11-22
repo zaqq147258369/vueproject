@@ -13,11 +13,11 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
-  "dependencies": { //{运行时依赖包}
+  "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
-  "devDependencies": { //开发时依赖包
+  "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",

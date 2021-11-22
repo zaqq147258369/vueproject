@@ -1,0 +1,35 @@
+<template>
+	 <slot></slot>
+</template>
+
+<script>
+</script>
+
+<style>
+</style>
+
+//子组件向父组件传递数据是需要自定义事件（$emit Events）,只需要说是自定义事件就ok
+ //props使用对象，可以使用功能类型原则，xx：{type：string，default(){return []}}；default可以赋予默认值，required：true必须传的值
+ //子组件向父组件传值：
+ // 
+ 
+ 组件化：
+ 父组件访问子组件，获取子组件内容。
+ $refs;
+ 组件内属性 ref="sss";
+ this.$refs.sss.xxx
+
+子组件访问父组件。
+$parent
+this.$parent
+ 
+$root 直接访问子节点。
+
+插槽的基本使用：
+slot 翻译为插槽：在原有东西扩充，让封装的组件更具扩展性,可以让内容显示不一样。
+父组件调用子组件是，在子组件标签内插入需要的元素，该元素会替换到插槽的位置，由此显示不一样的内容。
+具名插槽：插槽命名，添加name属性。
+ <slot name='xxx'></slot> 子组件
+ 
+ <cpn> <span slot="xxx"></span></cpn>
+ 
