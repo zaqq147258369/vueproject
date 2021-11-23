@@ -33,7 +33,21 @@ webpack的配置：
 
   css-loader
   style-loader
-  less-loader
+  less-loader 处理.less文件
+  url-loader  处理url
+  file-loader 处理文件
+  babel-loader //处理es6-》es5
+
+  vue-loader //vue加载
+  vue-template-compiler //vue编译
+
+  vue-loader
+
+  ^1.2.0 // ^符号可以自己找版本，需要最近的存在的版本。
+
+
+
+
 
 
 
