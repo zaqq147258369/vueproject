@@ -45,6 +45,19 @@ webpack的配置：
 
   ^1.2.0 // ^符号可以自己找版本，需要最近的存在的版本。
 
+plugin：
+  plugin是插件的意思，通常是用于对某个现有框架进行扩展。
+  webpack中的插件，就是对webpack现有功能的各种扩展
+loader和plugin的区别：
+  loader转化模块，是一个加载转换器
+  plugin是插件，是一个扩展器。
+
+webpack-dev-server
+
+npm run dev 运行的方法实际是运行了 webpack-dev-server，使用了webpack运行本地服务。
+
+
+
 
 
 
