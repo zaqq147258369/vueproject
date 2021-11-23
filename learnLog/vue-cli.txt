@@ -1,2 +1,7 @@
 Vue CLI：
+  官方发布的vue.js项目脚手架。
+  使用vue CLI快速搭建Vue开发环境以及对应的webpack配置。
+
+vue全家桶：
+  vue-router+vuex+VueCore
 
