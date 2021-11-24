@@ -4,4 +4,5 @@ Vue CLI：
 
 vue全家桶：
   vue-router+vuex+VueCore
+  网络请求封装（axios）
 
