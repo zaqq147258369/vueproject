@@ -18,7 +18,16 @@ const routes = [
         component:Home,
         children:[
             {
-                path:'news'
+                path: '',
+                redirect:'news '
+            },
+            {
+                path:'news',
+                component:()=>import('../components/HomeNew')
+            },
+            {
+                path: 'message',
+                component:()=>import('../components/HomeMessage')
             }
         ]
     },{

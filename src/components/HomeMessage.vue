@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>子节点</h1>
-    <h1>新闻</h1>
+    <h2>消息</h2>
+    <h2>子节点</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HomeNew"
+  name: "HomeMessage"
 }
 </script>
 
