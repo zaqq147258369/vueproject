@@ -23,7 +23,27 @@ vue-router：是vue.js官方路由插件
 2、与组件映射
 3、使用路由：通过<router-link>和<router-view>
 
+<router-link>被渲染成a标签
+<router-view>渲染组件
 
+router-link 属性：
+    tag=“button”，可以指定将其渲染成什么组件，如button可以将其渲染成button标签。
+    replace ，使用之后不会留下history记录，所以后退键不能使用。
+    active-class
+
+动态路由：
+    某些情况下路由是不确定的，
+    在router的js中配置路由，path实现动态 path：‘/xxx/:xxx’,
+    组件中给属性赋值，:to="'/ddd/'+userId".
+获取路由的部分信息：
+    $router:代表全局的router对象。
+    $route：代表当前活跃的路由。
+
+路由的懒加载：
+    当打包只有一个js时，会影响页面加载。
+    如果把不同路由对应的组件分割成不同代码块，然后当路由被访问的时候才加载对应组件，可以更高效。
+
+嵌套路由:
 
 
 
