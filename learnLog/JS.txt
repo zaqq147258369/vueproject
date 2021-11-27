@@ -45,6 +45,18 @@ router-link 属性：
 
 嵌套路由:
 
+路由参数传递：
+  传递参数主要两种类型：params和query
+  params的类型：
+     配置路由的格式：/router/:id
+     传递的方式：在path后跟上对应的值
+     传递后形成的路径：/router/123,/router/abc
+  query的类型：
+    配置路由格式：/router,普通配置
+    传递的方式：对象使用query的key作为传递方式
+    传递后的路径：/router?id=123,/router?id=abc
+
+
 
 
 
