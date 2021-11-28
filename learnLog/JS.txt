@@ -60,6 +60,10 @@ $route和$router的区别
 $router是Vue实例，可以使用$router.push等方法。
 $route是当前router跳转对象，可以获取name,path,query,params等属性。
 
+基本生命周期：创建，挂载（dom渲染完成），更新（当数据发送改变），销毁
+
+导航守卫：
+    监听全局路由跳转
 
 
 

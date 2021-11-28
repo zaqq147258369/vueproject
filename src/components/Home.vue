@@ -10,7 +10,10 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  created() {//组件内的创建。
+    document.title = '首页'
+  }
 }
 </script>
 

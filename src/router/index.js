@@ -17,6 +17,9 @@ const routes = [
     {
         path:'/home',
         component:Home,
+        meta:{
+          title:'首页'
+        },
         children:[
             {
                 path: '',
@@ -33,10 +36,20 @@ const routes = [
         ]
     },{
         path:'/about',
-        component: About
+        component: About,
+        meta:{
+            title:'关于'
+        },
+        //路由独享守卫
+        beforEnter:(to,from,next)=>{
+            next();
+        }
     },{
         path: '/user/:userId',
-        component: User
+        component: User,
+        meta:{
+            title:'个人'
+        },
     },{
         path: '/profile',
         component: Profile
@@ -49,6 +62,20 @@ const router = new VueRouter({
     mode:'history',
     //设置活跃的样式。
     // linkActiveClass:''
+})
+//全局守卫：
+// 前置守卫（guard）
+router.beforeEach((to,from,next)=>{
+    //从from跳转到to
+    //路由导航，导航守卫
+    document.title = to.matched[0].meta.title
+    next();
+})
+// 后置钩子（hook）
+router.afterEach((to,from) =>{
+    console.log(to);
+    console.log(from);
+    console.log('....');
 })
 
 //将router对象传入到Vue实例
