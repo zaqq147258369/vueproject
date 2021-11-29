@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Home from "../components/Home";
-import About from "../components/About";
-import User from "../components/User";
-const Profile = () => import('../components/Profile')
+import Home from "../components/learning/Home";
+import About from "../components/learning/About";
+import User from "../components/learning/User";
+const Profile = () => import('../components/learning/Profile')
 //通过Vue.use(插件)，安装插件
 Vue.use(VueRouter)
 
@@ -27,11 +27,11 @@ const routes = [
             },
             {
                 path:'news',
-                component:()=>import('../components/HomeNew')
+                component:()=>import('../components/learning/HomeNew')
             },
             {
                 path: 'message',
-                component:()=>import('../components/HomeMessage')
+                component:()=>import('../components/learning/HomeMessage')
             }
         ]
     },{

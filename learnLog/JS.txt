@@ -65,6 +65,17 @@ $route是当前router跳转对象，可以获取name,path,query,params等属性�
 导航守卫：
     监听全局路由跳转
 
+keep-alive：
+    keep-alive是Vue内置的组件，可以使被包含的组件保留状态，或避免重新渲染。
+    可以使用activated，deactivated。
+    有两个属性，include，exclude。
+    include，字符串/正则表达式，只有匹配的组件才会被缓存。
+    exclude，字符串/正则表达式，所有匹配的组件不会被缓存。
+
+封装基本的TabBar组件。
+    实现思路：
+
+
 
 
 
