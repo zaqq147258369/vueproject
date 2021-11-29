@@ -5,13 +5,8 @@
         <template v-slot:item-icon>
           <img src="./assets/img/tabbar/icon01.png" alt="">
         </template>
-        <template v-slot:item-text>
-          <div >首页</div>
-        </template>
-      </tab-bar-item>
-      <tab-bar-item>
-        <template v-slot:item-icon>
-          <img src="./assets/img/tabbar/icon01.png" alt="">
+        <template v-slot:item-icon-active>
+          <img src="./assets/img/tabbar/icon01_active.png" alt="">
         </template>
         <template v-slot:item-text>
           <div >首页</div>
@@ -19,10 +14,24 @@
       </tab-bar-item>
       <tab-bar-item>
         <template v-slot:item-icon>
-          <img src="./assets/img/tabbar/icon01.png" alt="">
+          <img src="./assets/img/tabbar/icon02.png" alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="./assets/img/tabbar/icon02_active.png" alt="">
         </template>
         <template v-slot:item-text>
-          <div >首页</div>
+          <div >分类</div>
+        </template>
+      </tab-bar-item>
+      <tab-bar-item>
+        <template v-slot:item-icon>
+          <img src="./assets/img/tabbar/icon03.png" alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="./assets/img/tabbar/icon03_active.png" alt="">
+        </template>
+        <template v-slot:item-text>
+          <div >购物车</div>
         </template>
       </tab-bar-item>
     </tar-bar>
