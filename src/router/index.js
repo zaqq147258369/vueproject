@@ -9,11 +9,11 @@ Vue.use(VueRouter)
 
 //创建VueRouter对象
 const routes = [
-    {
-        path: '',
-        //redirect重定向,修改url。
-        redirect:'/home'
-    },
+    // {
+    //     path: '',
+    //     //redirect重定向,修改url。
+    //     redirect:'/home'
+    // },
     {
         path:'/home',
         component:Home,
