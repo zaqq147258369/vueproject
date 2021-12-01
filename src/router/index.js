@@ -1,39 +1,45 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Home from "../components/learning/Home";
+// import Home from "../components/learning/Home";
 import About from "../components/learning/About";
 import User from "../components/learning/User";
-const Profile = () => import('../components/learning/Profile')
+// const Profile = () => import('../components/learning/Profile')
+const Home = () => import('../views/home/Home')
+const Category = () => import('../views/category/Category')
+const Cart = () => import('../views/cart/Cart')
+const Profile = () => import('../views/profile/Profile')
+
+
 //通过Vue.use(插件)，安装插件
 Vue.use(VueRouter)
 
 //创建VueRouter对象
 const routes = [
-    // {
-    //     path: '',
-    //     //redirect重定向,修改url。
-    //     redirect:'/home'
-    // },
+    {
+        path: '',
+        //redirect重定向,修改url。
+        redirect:'/home'
+    },
     {
         path:'/home',
         component:Home,
         meta:{
           title:'首页'
         },
-        children:[
-            {
-                path: '',
-                redirect:'news'
-            },
-            {
-                path:'news',
-                component:()=>import('../components/learning/HomeNew')
-            },
-            {
-                path: 'message',
-                component:()=>import('../components/learning/HomeMessage')
-            }
-        ]
+        // children:[
+        //     {
+        //         path: '',
+        //         redirect:'news'
+        //     },
+        //     {
+        //         path:'news',
+        //         component:()=>import('../components/learning/HomeNew')
+        //     },
+        //     {
+        //         path: 'message',
+        //         component:()=>import('../components/learning/HomeMessage')
+        //     }
+        // ]
     },{
         path:'/about',
         component: About,
@@ -53,7 +59,14 @@ const routes = [
     },{
         path: '/profile',
         component: Profile
+    },{
+        path: '/category',
+        component:Category
+    },{
+        path: '/cart',
+        component:Cart
     }
+
 ]
 const router = new VueRouter({
     //配置路由和组件之间的应用关系
@@ -71,12 +84,12 @@ router.beforeEach((to,from,next)=>{
     document.title = to.matched[0].meta.title
     next();
 })
-// 后置钩子（hook）
-router.afterEach((to,from) =>{
-    console.log(to);
-    console.log(from);
-    console.log('....');
-})
+// // 后置钩子（hook）
+// router.afterEach((to,from) =>{
+//     console.log(to);
+//     console.log(from);
+//     console.log('....');
+// })
 
 //将router对象传入到Vue实例
 export default router
