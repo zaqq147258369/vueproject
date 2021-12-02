@@ -5,10 +5,10 @@ function resolve(dir) {
 module.exports = {
     chainWebpack:(config)=>{
         config.resolve.alias
-            .set( 'styles', resolve('@/assets/styles'))
-            .set( 'images', resolve('@/assets/images'))
-            .set( 'css', resolve('@/assets/css'))
-            .set( 'components', resolve('@/components'))
-            .set( 'views', resolve('@/views'))
+            .set( 'styles', resolve('src/assets/styles'))
+            .set( 'images', resolve('src/assets/images'))
+            .set( 'css', resolve('src/assets/css'))
+            .set( 'components', resolve('src/components'))
+            .set( 'views', resolve('src/views'))
     }
 }

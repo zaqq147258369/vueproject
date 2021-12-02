@@ -1,7 +1,7 @@
 <template>
   <div>
     <tar-bar>
-      <tab-bar-item path="/home" activeColor="#669600">
+      <tab-bar-item path="/home" activeColor="red">
         <template v-slot:item-icon>
           <img src="@/assets/img/tabbar/icon01.png" alt="">
         </template>
@@ -12,7 +12,7 @@
           <div >首页</div>
         </template>
       </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="#886960">
+      <tab-bar-item path="/category" activeColor="red">
         <template v-slot:item-icon>
           <img src="@/assets/img/tabbar/icon02.png" alt="">
         </template>
@@ -23,7 +23,7 @@
           <div >分类</div>
         </template>
       </tab-bar-item>
-      <tab-bar-item path="/cart" activeColor="#119600">
+      <tab-bar-item path="/cart" activeColor="red">
         <template v-slot:item-icon>
           <img src="@/assets/img/tabbar/icon03.png" alt="">
         </template>
