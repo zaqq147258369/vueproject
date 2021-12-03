@@ -95,12 +95,69 @@ export default {
       }).catch((err)=>{
         console.log(err);
       })
+    },
+    promiselearn6(){
+      //多个请求存在，只有当多个请求都回调成才执行下一步
+      // 基本的ajax请求，js操作
+      // let aaa = false;
+      // let bbb = false;
+      // $ajax({
+      //   url:'',
+      //   success:function (){
+      //     aaa = true;
+      //     handresult();
+      //   }
+      // })
+      // $ajax({
+      //   url:'',
+      //   success:function (){
+      //     bbb = true;
+      //     handresult();
+      //   }
+      // })
+      // function handresult() {
+      //   // eslint-disable-next-line no-empty
+      //   if (aaa && bbb){
+      //    判断符合条件
+      //   }
+      // }
+
+      // 使用promise处理,.all操作，传入new Promise的数组，然后then可以得到对应的请求的数据
+      Promise.all([
+          new Promise(resolve => {
+            // let $;
+            // $.ajax({
+            //     url:'',
+            //     success:function (data){
+            //       resolve(data);
+            //     }
+            // })
+            setTimeout(()=>{
+              resolve("111")
+            },5000)
+          }),
+        new Promise(resolve => {
+          // let $;
+          // $.ajax({
+          //   url:'',
+          //   success:function (data){
+          //     resolve(data);
+          //   }
+          // })
+          setTimeout(()=>{
+            resolve("222")
+          },2000)
+        }),
+      ]).then(result=>{
+        console.log(result);
+      })
     }
   },
   mounted() {
     // this.promiselearn();
     // this.promiselearn4();
-    this.promiselearn5();
+    // this.promiselearn5();
+    this.promiselearn6();
   }
 }
 </script>
