@@ -157,7 +157,7 @@ export default {
     // this.promiselearn();
     // this.promiselearn4();
     // this.promiselearn5();
-    this.promiselearn6();
+    // this.promiselearn6();
   }
 }
 </script>
