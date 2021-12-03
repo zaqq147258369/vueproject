@@ -12,6 +12,7 @@ export default {
   methods:{
     addition(){
       this.$store.commit('increment')
+
     },
     deleteition(){
       this.$store.commit('decrement')
