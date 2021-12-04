@@ -16,3 +16,15 @@ Vuex是响应式。
 
 
 修改状态：
+
+
+VUex有几个核心概念：
+    State
+    Getters
+    Mutation
+    Action
+    Module
+
+State：单一状态树，单一数据源。整个项目只有一个store
+Getters：公共方法，定义函数，可以在组件中调用。在Getters中可以直接调用getters本身
+

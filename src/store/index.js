@@ -22,7 +22,20 @@ const store = new Vuex.Store({
 
     },
     getters:{
-
+        powerCounter(state){
+            return state.counter * state.counter
+        },
+        more20stu(){
+            return this.state.counter * 2;
+        },
+        momore(){
+            return this.getters.more20stu+2
+        },
+        morget(){
+            return num => {
+                 return this.getters.momore * num
+            }
+        }
     },
     modules:{
 
