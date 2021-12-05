@@ -26,5 +26,26 @@ VUex有几个核心概念：
     Module
 
 State：单一状态树，单一数据源。整个项目只有一个store
+
 Getters：公共方法，定义函数，可以在组件中调用。在Getters中可以直接调用getters本身
+
+Mutation：Vuex中的store状态的更新唯一方式就是：提交Mutation
+    Mutation主要包括：
+        事件类型（type），
+        一个回调函数（handler），该回调函数的第一个参数就是state
+    通过mutation更新：
+        this.$store.commit('xxx');
+    mutation的参数：
+        第一个参数是state，之后是参数。
+        组件中使用，commit（'xxx',参数）
+        参数被称为mutation的载荷
+    提交方式:
+        commit:普通提交方式。
+        对象提交：{type：’xxx‘，num，xxx}
+    响应规则:
+        1、store中必须已经初始化，当属性初始化之后，这些属性才会被加入到响应式的系统中，而响应式系统会监听属性的变化，当属性发生改变时，会通知所有界面中用到属性的地方，让界面进行刷新更改数据
+           当新增了一个新的未初始化的属性，界面不会发生刷新，响应式不会触发。
+           但是可以使用Vue的方法，如：Vue.set(state.info,'address','xxx'),如此就可以实现响应式
+    类型常量：
+
 
