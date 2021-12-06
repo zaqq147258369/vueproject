@@ -1,0 +1,7 @@
+网络请求模块的选择：axios
+    优点：
+        在浏览器发送XMLHttpRequests请求，
+        在node.js中发送http请求，
+        支持Promise API，
+        拦截请求和响应，
+        转换请求和响应数据。
