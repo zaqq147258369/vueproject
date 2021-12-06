@@ -58,5 +58,6 @@ axios.all([
     })
 ]).then(res=>{
   console.log(res);
+
 })
 
