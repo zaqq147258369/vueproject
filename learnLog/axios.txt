@@ -5,3 +5,14 @@
         支持Promise API，
         拦截请求和响应，
         转换请求和响应数据。
+
+    支持多种请求方式：
+        axios(config)
+        axios.request(config)
+        axios.get(url[,config])
+        axios.delete(url[,config])
+        axios.head(url[,config])
+        axios.post(url[,data[,config]])
+        axios.put(url[,data[,config]])
+        axios.patch(url[,data[,config]])
+
