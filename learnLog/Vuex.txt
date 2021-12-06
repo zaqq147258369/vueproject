@@ -47,5 +47,12 @@ Mutation：Vuex中的store状态的更新唯一方式就是：提交Mutation
            当新增了一个新的未初始化的属性，界面不会发生刷新，响应式不会触发。
            但是可以使用Vue的方法，如：Vue.set(state.info,'address','xxx'),如此就可以实现响应式
     类型常量：
+    mutation中的方法必须是同步方法。不能进行异步操作。
+
+Action：类似于Mutation，但是是用来替代Mutation进行异步操作的。
+
+Module：模块，当store对象变得臃肿，vue为了解决，可以将store进行分割模块，每个模块都拥有自己的state，mutations，actions，getters
+
+项目结构：
 
 

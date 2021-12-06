@@ -11,6 +11,9 @@
     <h2>{{$store.getters.powerCounter}}</h2>
     <h1>{{$store.getters.morget(222)}}</h1>
 
+    <h3>获取store中module中的值</h3>
+    <h2>{{$store.state.a.name}}</h2>
+
   </div>
 </template>
 
@@ -37,7 +40,19 @@ export default {
       });
     },
     updateInfo(){
-      this.$store.commit('updateInfor');
+      //mutation的操作，同步
+      // this.$store.commit('updateInfor');
+      // action的操作，异步操作1
+     // this.$store.dispatch('aUpdateInfor', {
+     //   message:'1111',
+     //   success:()=>{
+     //     console.log('6666');
+     //   }
+     // });
+      // action的操作，异步操作2
+      this.$store.dispatch('aUpdateInfor','2222').then(res=>{
+            console.log(res);
+          });
     }
   }
 }
