@@ -1,0 +1,22 @@
+Hook：
+    hook就是钩子函数。
+    钩子函数：在一个事件触发的时候，在系统级捕获到它，然后做一些操作。类似于回调函数。
+        一个函数/方法，在系统消息触发时被系统调用，例如click等事件调用。
+        不是用户自己触发，例如订阅者发布者模式的实现。
+    钩子函数的名称时确定的，当系统消息触发，自动调用。
+        Vue的watch()函数，用户只需要编写watch()的函数体内的函数，当页面元素发生变化的时候，系统就会先调用watch().
+    常见的钩子函数：vue的生命周期函数，vue的自定义指令等修改函数。
+
+Hooks的简单实现
+
+Vue的生命周期钩子函数：创建，挂载，更新（数据），销毁
+    beforeCreate：初始化空的Vue对象。
+    create：初始化data和methods
+    beforeMount：开始编译钩子函数（生成html）
+    mount：将编译好的html挂载到页面完成，可以发送请求获取数据进行数据初始化，但是mount在整个实例内只执行一次
+    beforeUpdate：当data被修改时触发，虚拟dom重新渲染并应用更新。
+    updated：updated执行时，页面和data数据保持同步。
+    beforeDestroy：销毁前，组件数据、方法都未销毁
+    destroyed：组件完全销毁，组件内所有data，methods等都不能使用。
+
+Vue Hook：
